@@ -20,6 +20,7 @@ export default function LanguageSelector({ selectedLanguage, onLanguageChange })
         onChange={(e) => onLanguageChange(e.target.value)}
         aria-label={ariaLabel}
         className="language-select"
+        suppressHydrationWarning
       >
         {SUPPORTED_LANGUAGES.map((lang) => (
           <option key={lang.code} value={lang.code}>

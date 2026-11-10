@@ -45,8 +45,12 @@ export default function ShareButton({
 
     // Determine target URL
     let targetUrl = url;
-    if (!targetUrl && typeof window !== 'undefined') {
-      targetUrl = window.location.origin;
+    if (typeof window !== 'undefined') {
+      if (!targetUrl) {
+        targetUrl = window.location.origin;
+      } else if (targetUrl.startsWith('/')) {
+        targetUrl = `${window.location.origin}${targetUrl}`;
+      }
     }
 
     const shareData = {

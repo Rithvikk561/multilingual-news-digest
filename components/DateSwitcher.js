@@ -82,6 +82,7 @@ export default function DateSwitcher({
               placeholder={searchPlaceholder}
               className="search-input"
               aria-label={searchPlaceholder}
+              suppressHydrationWarning
             />
             {searchQuery && (
               <button

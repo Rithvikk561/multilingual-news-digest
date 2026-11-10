@@ -39,7 +39,7 @@ export default function CategorySection({
         <div className="category-header-line" aria-hidden="true"></div>
         <ShareButton
           variant="category"
-          url={typeof window !== 'undefined' ? `${window.location.origin}/#category-${category.id}` : `/#category-${category.id}`}
+          url={`/#category-${category.id}`}
           title={`MND — ${categoryLabel} News`}
           categoryLabel={categoryLabel}
         />

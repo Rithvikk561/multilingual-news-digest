@@ -40,7 +40,7 @@ export default function Header({
       <div className="top-dateline-bar">
         <div className="top-dateline-inner">
           <div className="dateline-left">
-            <span className="dateline-date">
+            <span className="dateline-date" suppressHydrationWarning>
               <span className="dateline-icon" aria-hidden="true">📅</span> {formattedDate}
             </span>
             <span className="dateline-divider">•</span>
@@ -86,7 +86,7 @@ export default function Header({
             <div className="control-item header-share-control">
               <ShareButton
                 variant="masthead"
-                url={typeof window !== 'undefined' ? window.location.origin : ''}
+                url=""
                 title="MND — Multilingual News Digest"
                 text="Stay updated with the latest Indian news. Sports, politics, technology, education and more — in your language."
               />

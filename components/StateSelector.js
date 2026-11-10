@@ -13,6 +13,7 @@ export default function StateSelector({ selectedState, onStateChange, selectedLa
         onChange={(e) => onStateChange(e.target.value)}
         aria-label={ariaLabel}
         className="state-select"
+        suppressHydrationWarning
       >
         {INDIAN_STATES.map((state) => (
           <option key={state.value} value={state.value}>
